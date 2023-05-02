@@ -8,17 +8,16 @@ struct ClassifierDetector {
 
     let numberOfCandidates = 5
     var coreModel: VNCoreMLModel?
-
-    init(modelName: String ) {
-        guard let modelURL = Bundle.main.url(forResource: modelName,
+    
+    init() {
+        guard let modelURL = Bundle.main.url(forResource: "My-Passio-MindsEye-Model",
                                              withExtension: "mlmodelc") else {
-            print("Couldn't find the model = \(modelName)")
+            print("Couldn't find the model My-Passio-MindsEye-Model.mlmodel")
             return
         }
 
         do {
-            let config = MLModelConfiguration()
-            let model = try MLModel(contentsOf: modelURL, configuration: config )
+            let model = try MLModel(contentsOf: modelURL) //, configuration: config )
             coreModel = try VNCoreMLModel(for: model)
         } catch let error as NSError {
             print("Error loading model: \(error)")

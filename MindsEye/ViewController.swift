@@ -11,8 +11,7 @@ import VideoToolbox
 
 class ViewController: UIViewController {
     
-#warning("Remane your model to MyModel or call your model name below")
-    let classifierDetector = ClassifierDetector(modelName: "MyModel")
+ let classifierDetector = ClassifierDetector()
     
 //Simple UI
     @IBOutlet weak var classLabel: UILabel!
@@ -22,8 +21,13 @@ class ViewController: UIViewController {
 // Parameters to send the PixelBuffer to the Classifier
     var timeBetweenDetection = 0.5
     var lastImageTime = Date()
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    }
 
     override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         setupPreviewLayer()
     }
 
@@ -54,7 +58,7 @@ class ViewController: UIViewController {
             return
         }
         preview.session = captureSession
-        DispatchQueue.global(qos: .background).async {
+        DispatchQueue.global(qos: .userInteractive).async {
             session.startRunning()
         }
         preview.videoGravity = AVLayerVideoGravity.resizeAspectFill

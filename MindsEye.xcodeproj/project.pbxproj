@@ -14,7 +14,7 @@
 		9E6BF37C29FAEDF000692E87 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9E6BF37B29FAEDF000692E87 /* Assets.xcassets */; };
 		9E6BF37F29FAEDF000692E87 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E6BF37D29FAEDF000692E87 /* LaunchScreen.storyboard */; };
 		9E6BF38729FAEE1800692E87 /* ClassifierDetector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E6BF38629FAEE1800692E87 /* ClassifierDetector.swift */; };
-		9E6BF38929FB084800692E87 /* MyModel.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 9E6BF38829FB02E300692E87 /* MyModel.mlmodel */; };
+		9E6BF38929FB084800692E87 /* My-Passio-MindsEye-Model.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 9E6BF38829FB02E300692E87 /* My-Passio-MindsEye-Model.mlmodel */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,7 +27,7 @@
 		9E6BF37E29FAEDF000692E87 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9E6BF38029FAEDF000692E87 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9E6BF38629FAEE1800692E87 /* ClassifierDetector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassifierDetector.swift; sourceTree = "<group>"; };
-		9E6BF38829FB02E300692E87 /* MyModel.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = MyModel.mlmodel; sourceTree = "<group>"; };
+		9E6BF38829FB02E300692E87 /* My-Passio-MindsEye-Model.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = "My-Passio-MindsEye-Model.mlmodel"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,7 +60,7 @@
 		9E6BF37129FAEDEF00692E87 /* MindsEye */ = {
 			isa = PBXGroup;
 			children = (
-				9E6BF38829FB02E300692E87 /* MyModel.mlmodel */,
+				9E6BF38829FB02E300692E87 /* My-Passio-MindsEye-Model.mlmodel */,
 				9E6BF37629FAEDEF00692E87 /* ViewController.swift */,
 				9E6BF38629FAEE1800692E87 /* ClassifierDetector.swift */,
 				9E6BF37829FAEDEF00692E87 /* Main.storyboard */,
@@ -144,7 +144,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9E6BF38929FB084800692E87 /* MyModel.mlmodel in Sources */,
+				9E6BF38929FB084800692E87 /* My-Passio-MindsEye-Model.mlmodel in Sources */,
 				9E6BF37729FAEDEF00692E87 /* ViewController.swift in Sources */,
 				9E6BF37329FAEDEF00692E87 /* AppDelegate.swift in Sources */,
 				9E6BF38729FAEE1800692E87 /* ClassifierDetector.swift in Sources */,
