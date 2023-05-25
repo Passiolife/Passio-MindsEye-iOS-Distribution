@@ -3,6 +3,7 @@
 import UIKit
 import CoreML
 import Vision
+import VideoToolbox
 
 struct ClassifierDetector {
 
@@ -52,8 +53,13 @@ struct ClassifierDetector {
         }
 
         request.imageCropAndScaleOption = .scaleFill
-
-        try? VNImageRequestHandler(cmSampleBuffer: cmSampleBuffer).perform([request])
+        guard let imageBuffer = CMSampleBufferGetImageBuffer(cmSampleBuffer),
+              let image = UIImage(pixelBuffer: imageBuffer),
+              let cgimage = image.cgImage else {
+            return
+        }
+        
+        try? VNImageRequestHandler(cgImage: cgimage, orientation: .right).perform([request])
     }
 
 }
@@ -61,4 +67,16 @@ struct ClassifierDetector {
 struct ClassCandidateImp {
     var label: String
     var confidence: Double
+}
+
+extension UIImage {
+internal convenience init?(pixelBuffer: CVPixelBuffer) {
+    var cgImage: CGImage?
+    VTCreateCGImageFromCVPixelBuffer(pixelBuffer, options: nil, imageOut: &cgImage)
+    if let cgImage = cgImage {
+      self.init(cgImage: cgImage)
+    } else {
+      return nil
+    }
+  }
 }

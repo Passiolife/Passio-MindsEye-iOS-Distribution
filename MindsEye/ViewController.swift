@@ -28,7 +28,19 @@ class ViewController: UIViewController {
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        setupPreviewLayer()
+        if AVCaptureDevice.authorizationStatus(for: .video) == .authorized {
+            setupPreviewLayer()
+        } else {
+            AVCaptureDevice.requestAccess(for: .video) { (granted) in
+                if granted {
+                    DispatchQueue.main.async {
+                        self.setupPreviewLayer()
+                    }
+                } else {
+                    print("The user didn't grant access to use camera")}
+            }
+        }
+        
     }
 
     func setupPreviewLayer() {
@@ -80,19 +92,16 @@ extension ViewController: AVCaptureVideoDataOutputSampleBufferDelegate {
               }
 
         lastImageTime = Date()
-        DispatchQueue.main.async {
-            self.classLabel.isHidden = false
-            self.classLabel.text = "Scanning"
-        }
 
         classifierDetector.detectCandidatesIn(cmSampleBuffer: sampleBuffer) { candidates in
-            if let first = candidates.first {
-                DispatchQueue.main.async {
+            DispatchQueue.main.async {
+                if let first = candidates.first {
                     self.classLabel.text = "\(first.label): \(round(first.confidence*100)/100)"
+                        } else {
+                    self.classLabel.text = "Scanning"
                 }
             }
         }
-
     }
 
 }

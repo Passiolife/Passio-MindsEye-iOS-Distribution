@@ -15,6 +15,7 @@
 		9E6BF37F29FAEDF000692E87 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E6BF37D29FAEDF000692E87 /* LaunchScreen.storyboard */; };
 		9E6BF38729FAEE1800692E87 /* ClassifierDetector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E6BF38629FAEE1800692E87 /* ClassifierDetector.swift */; };
 		9E6BF38929FB084800692E87 /* My-Passio-MindsEye-Model.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 9E6BF38829FB02E300692E87 /* My-Passio-MindsEye-Model.mlmodel */; };
+		9EA90A6D2A1FF3A200BA1B60 /* passio-logo-color.png in Resources */ = {isa = PBXBuildFile; fileRef = 9EA90A6C2A1FF3A200BA1B60 /* passio-logo-color.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		9E6BF38029FAEDF000692E87 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9E6BF38629FAEE1800692E87 /* ClassifierDetector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassifierDetector.swift; sourceTree = "<group>"; };
 		9E6BF38829FB02E300692E87 /* My-Passio-MindsEye-Model.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = "My-Passio-MindsEye-Model.mlmodel"; sourceTree = "<group>"; };
+		9EA90A6C2A1FF3A200BA1B60 /* passio-logo-color.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "passio-logo-color.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +67,7 @@
 				9E6BF38629FAEE1800692E87 /* ClassifierDetector.swift */,
 				9E6BF37829FAEDEF00692E87 /* Main.storyboard */,
 				9E6BF37B29FAEDF000692E87 /* Assets.xcassets */,
+				9EA90A6C2A1FF3A200BA1B60 /* passio-logo-color.png */,
 				9E6BF37229FAEDEF00692E87 /* AppDelegate.swift */,
 				9E6BF37429FAEDEF00692E87 /* SceneDelegate.swift */,
 				9E6BF37D29FAEDF000692E87 /* LaunchScreen.storyboard */,
@@ -132,6 +135,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9E6BF37F29FAEDF000692E87 /* LaunchScreen.storyboard in Resources */,
+				9EA90A6D2A1FF3A200BA1B60 /* passio-logo-color.png in Resources */,
 				9E6BF37C29FAEDF000692E87 /* Assets.xcassets in Resources */,
 				9E6BF37A29FAEDEF00692E87 /* Main.storyboard in Resources */,
 			);
